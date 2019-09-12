@@ -1,6 +1,5 @@
 # axios
 
-#### Axios
 ###### 1.axios请求方式
 
 - get  获取数据

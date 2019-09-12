@@ -13,4 +13,11 @@
 
 ##### 本地项目上传至github
 - 创建本地项目目录，执行 `git init`
-- 然后执行 `git add .` 将项目目录下所有文件添加到本地git仓库，过程中可以使用 ` git status`查看当前状态
+- 然后执行 `git add .` 将项目目录下所有文件添加到本地git仓库，可以使用 `git status`查看当前状态
+- 把项目提交到本地仓库  
+   `git commit -m "提交描述信息"`
+- 将在Github上Git仓库之后我们就可以和本地仓库进行关联了  
+   `git remote add origin https://github.com/guyibang/TEST2.git(github仓库地址)`
+- 关联好之后我们就可以把本地库的所有内容推送到远程仓库（也就是Github）上了  
+   `git push -u origin master`  
+  由于新建的远程仓库是空的，所以要加上-u这个参数
