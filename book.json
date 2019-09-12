@@ -2,5 +2,17 @@
   "title": "test gitbook",
   "author": "wangTao",
   "description": "study gitbook",
-  "language": "zh-hans"
+  "language": "zh-hans",
+  "plugins": [
+     "-search",
+     "back-to-top-button",
+     "expandable-chapters-small",
+     "insert-logo"
+  ],
+  "pluginsConfig": {
+    "insert-logo": {
+      "url": "http://image.baidu.com/search/detail?ct=503316480&z=&tn=baiduimagedetail&ipn=d&word=dongman&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=-1&hd=&latest=&copyright=&cs=551180330,2986440005&os=1456027122,13012968&simid=0,0&pn=8&rn=1&di=4400&ln=1812&fr=&fmq=1568273941348_R&ic=&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&is=0,0&istype=2&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&objurl=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201412%2F03%2F20141203134605_trMfV.thumb.700_0.jpeg&rpstart=0&rpnum=0&adpicid=0&force=undefined",
+      "style": "background: none; max-height: 30px; min-height: 30px"
+    }
+  }
 }
