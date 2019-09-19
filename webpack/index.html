@@ -1,0 +1,505 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>webpack · test gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="wangTao">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../jenkins/" />
+    
+    
+    <link rel="prev" href="../版本管理/svn版本管理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../gitbook使用/REANME.html">
+            
+                <a href="../gitbook使用/REANME.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    gitbook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../版本管理/REANME.html">
+            
+                <a href="../版本管理/REANME.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    版本管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../版本管理/git版本管理.html">
+            
+                <a href="../版本管理/git版本管理.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    git版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../版本管理/svn版本管理.html">
+            
+                <a href="../版本管理/svn版本管理.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    svn版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../jenkins/">
+            
+                <a href="../jenkins/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../axios/">
+            
+                <a href="../axios/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    axios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../鸣谢/">
+            
+                <a href="../鸣谢/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >webpack</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="webpack"><a name="webpack" class="plugin-anchor" href="#webpack"><i class="fa fa-link" aria-hidden="true"></i></a>webpack</h1>
+<h3 id="sourcemap&#x914D;&#x7F6E;"><a name="sourcemap&#x914D;&#x7F6E;" class="plugin-anchor" href="#sourcemap&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>SourceMap&#x914D;&#x7F6E;</h3>
+<p>&#x7F16;&#x8BD1;&#x4EE3;&#x7801;&#x4E0E;&#x6E90;&#x4EE3;&#x7801;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x4FBF;&#x4E8E;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x9519;&#x8BEF;</p>
+<pre class="language-"><code>devtool: &apos;source-map&apos;
+</code></pre><h6 id="&#x6700;&#x4F73;&#x5B9E;&#x8DF5;"><a name="&#x6700;&#x4F73;&#x5B9E;&#x8DF5;" class="plugin-anchor" href="#&#x6700;&#x4F73;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</h6>
+<p>&#x7EBF;&#x4E0A;&#x73AF;&#x5883;(prod)  <code>devtool: &apos;cheap-module-source-map&apos;</code><br>&#x5F00;&#x53D1;&#x73AF;&#x5883;(dev)  <code>devtool: &apos;cheap-module-eval-source-map&apos;</code></p>
+<h3 id="webpack-dev-server"><a name="webpack-dev-server" class="plugin-anchor" href="#webpack-dev-server"><i class="fa fa-link" aria-hidden="true"></i></a>webpack-dev-server</h3>
+<h6 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h6>
+<pre class="language-"><code>npm install webpack-dev-server -D
+</code></pre><h6 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;</h6>
+<pre class="language-"><code>devServer:{
+  contentBase: &apos;./dist&apos;,//&#x542F;&#x52A8;&#x76EE;&#x5F55;
+  open: true, // &#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;
+  port: 8080, // &#x6253;&#x5F00;&#x7AEF;&#x53E3;
+}
+</code></pre><h4 id="&#x624B;&#x5199;&#x7C7B;-webpack-dev-server-&#x5728;node&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;webpack"><a name="&#x624B;&#x5199;&#x7C7B;-webpack-dev-server-&#x5728;node&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;webpack" class="plugin-anchor" href="#&#x624B;&#x5199;&#x7C7B;-webpack-dev-server-&#x5728;node&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;webpack"><i class="fa fa-link" aria-hidden="true"></i></a>&#x624B;&#x5199;&#x7C7B; webpack-dev-server (&#x5728;node&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;webpack)</h4>
+<h6 id="&#x6240;&#x9700;&#x6A21;&#x5757;"><a name="&#x6240;&#x9700;&#x6A21;&#x5757;" class="plugin-anchor" href="#&#x6240;&#x9700;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6240;&#x9700;&#x6A21;&#x5757;</h6>
+<p>node&#x6A21;&#x5757; express<br>webpack&#x5F00;&#x53D1;&#x4E2D;&#x95F4;&#x4EF6; webpack-dev-middleware<br>&#x5B89;&#x88C5; <code>npm install express webpack-dev-middleware -D</code></p>
+<h6 id="&#x57FA;&#x672C;&#x914D;&#x7F6E;"><a name="&#x57FA;&#x672C;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x57FA;&#x672C;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x672C;&#x914D;&#x7F6E;</h6>
+<pre class="language-"><code>  const express = require(&apos;express&apos;) //express &#x6A21;&#x5757;
+  const webpack = required(&apos;webpack&apos;) //webpack&#x6A21;&#x5757;
+  const webpackDevMiddleware =  require(&apos;webpack-dev-middleware&apos;) //webpack &#x4E2D;&#x95F4;&#x4EF6;
+  const config = require(&apos;./webpack.config.js&apos;) //webpack&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+  const compiler = webpack(config) //&#x7F16;&#x8BD1;&#x5668;
+
+  const app = express() //&#x521B;&#x5EFA;http&#x670D;&#x52A1;&#x5668;
+
+  app.use(webpackDevMiddleware(compiler,{
+    // publicPath: config.output.publicPath //&#x53EF;&#x4E0D;&#x5199;&#xFF0C;&#x9700;&#x8981;&#x5728;output&#x914D;&#x7F6E;publicPath
+  }))
+
+  app.listen(3000, () =&gt; {
+    console.log(&apos;server is running&apos;)
+  })
+</code></pre><h3 id="webpack-hmrhot-module-replacement-&#x70ED;&#x6A21;&#x5757;&#x66F4;&#x65B0;"><a name="webpack-hmrhot-module-replacement-&#x70ED;&#x6A21;&#x5757;&#x66F4;&#x65B0;" class="plugin-anchor" href="#webpack-hmrhot-module-replacement-&#x70ED;&#x6A21;&#x5757;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>webpack HMR(Hot Module Replacement) &#x70ED;&#x6A21;&#x5757;&#x66F4;&#x65B0;</h3>
+<h6 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;</h6>
+<p>1.devServer&#x589E;&#x52A0;&#x76F8;&#x5173;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code>devServer{
+  hot: true, //&#x5F00;&#x542F;HMR
+  hotOnly: true
+}
+</code></pre><p>2.&#x4F7F;&#x7528;webpack&#x81EA;&#x5E26;&#x63D2;&#x4EF6; HotModuleReplacementPlugin</p>
+<pre class="language-"><code>const webpack = require(webpack)
+...
+plugins: [
+  new webpack.HotModuleReplacementPlugin()
+],
+...
+</code></pre><h3 id="&#x4F7F;&#x7528;babel-&#x5904;&#x7406;-es6"><a name="&#x4F7F;&#x7528;babel-&#x5904;&#x7406;-es6" class="plugin-anchor" href="#&#x4F7F;&#x7528;babel-&#x5904;&#x7406;-es6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;Babel &#x5904;&#x7406; ES6</h3>
+<h6 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h6>
+<pre class="language-"><code>npm install babel-loader @bable/core -D  //babel/core &#x8BED;&#x6CD5;&#x6838;&#x5FC3;&#x5E93;
+npm install @babel/presets-env -D  // &#x8BED;&#x6CD5;&#x8F6C;&#x6362;&#x89C4;&#x5219;
+npm install @bable/polyfill -D // &#x8865;&#x5145;&#x4F4E;&#x7248;&#x672C;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x5B58;&#x5728;&#x7684;ES6&#x8BED;&#x6CD5;&#x5185;&#x5BB9;
+</code></pre><h6 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;</h6>
+<p>&#x4E1A;&#x52A1;&#x4EE3;&#x7801; Babel&#x4F7F;&#x7528;&#x914D;&#x7F6E;(polyfill&#x4F1A;&#x4EA7;&#x751F;&#x5168;&#x5C40;&#x6C61;&#x67D3;)</p>
+<pre class="language-"><code>...
+module: {
+  rules: [
+    {
+      test: /\.js$/,
+      loader: &apos;babel-loader&apos;,
+      exclude: /node-modules/,
+      options:{
+        presets: [[&apos;@babel/presets-env&apos;,{
+          targets:{
+            chorme: &apos;67&apos; //&#x6253;&#x5305;&#x8FD0;&#x884C;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;
+          },
+          useBuiltIns: &apos;usage&apos; //polyfill&#x8BED;&#x6CD5;&#x5B9E;&#x73B0;&#x6309;&#x9700;&#x52A0;&#x8F7D;
+        }]]
+      }
+    },
+    ...
+  ]
+},
+...
+</code></pre><p>&#x7C7B;&#x5E93;/&#x7EC4;&#x4EF6;&#x5E93; Babel&#x914D;&#x7F6E;<br>1.&#x5B89;&#x88C5;</p>
+<pre class="language-"><code>npm install --save-dev @babel/plugin-transform-runtime
+npm install --save @babel/runtime
+</code></pre><p>2.&#x521B;&#x5EFA; .babelrc &#x6587;&#x4EF6;</p>
+<p>webpack.congfig.js&#x6587;&#x4EF6;&#x914D;&#x7F6E;:</p>
+<pre class="language-"><code>...
+module:{
+  rules:[
+    {
+      test: /\.js$/,
+      loader: &apos;babel-loader&apos;,
+      exclude: /node-modules/
+    },
+    ...
+  ]
+},
+...
+</code></pre><p>.babelrc&#x6587;&#x4EF6;&#x914D;&#x7F6E;(&#x4E0D;&#x80FD;&#x5199;&#x6CE8;&#x91CA;)</p>
+<pre class="language-"><code>{
+  &quot;plugins&quot;: [
+    [
+      &quot;@babel/plugin-transform-runtime&quot;,
+      {
+        &quot;corejs&quot;: 2,
+        &quot;helpers&quot;: true,
+        &quot;regenerator&quot;: true,
+        &quot;useESMModules&quot;: false
+      }
+    ]
+  ]
+}
+</code></pre><footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-09-12 15:02:35
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../版本管理/svn版本管理.html" class="navigation navigation-prev " aria-label="Previous page: svn版本管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../jenkins/" class="navigation navigation-next " aria-label="Next page: jenkins">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"webpack","level":"1.4","depth":1,"next":{"title":"jenkins","level":"1.5","depth":1,"path":"jenkins/README.md","ref":"jenkins/README.md","articles":[]},"previous":{"title":"svn版本管理","level":"1.3.2","depth":2,"path":"版本管理/svn版本管理.md","ref":"版本管理/svn版本管理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search","-highlight","-sharing","sharing-plus","prism","prism-themes","theme-default","back-to-top-button","expandable-chapters-small","splitter","anchors","code","tbfed-pagefooter"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"family":"sans","size":2,"theme":"white"},"fontSettings":{"family":"serif","size":2},"back-to-top-button":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"wangTao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"test gitbook","language":"zh-hans","gitbook":"*","description":"study gitbook"},"file":{"path":"webpack/README.md","mtime":"2019-09-12T07:02:35.135Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-19T08:46:11.990Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
