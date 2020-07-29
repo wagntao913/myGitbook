@@ -21,3 +21,5 @@
 - 关联好之后我们就可以把本地库的所有内容推送到远程仓库（也就是Github）上了  
    `git push -u origin master`  
   由于新建的远程仓库是空的，所以要加上-u这个参数
+##### 常用命令
+ <img src="https://persongitbook.oss-cn-beijing.aliyuncs.com/git.jpg">
