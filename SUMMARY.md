@@ -5,6 +5,7 @@
 * [git版本管理](版本管理/git版本管理.md)
 * [nvm安装与使用](nvm安装与使用/README.md)
 * [vue+webSocket 实时任务信息通知](vue+webSocket实时任务信息通知/README.md)
+* [centos 服务环境搭建](centos服务环境搭建/README.md)
 * [webpack](webpack/README.md)
 * [jenkins](jenkins/README.md)
 * [axios](axios/README.md)
