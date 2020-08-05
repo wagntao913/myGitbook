@@ -63,5 +63,6 @@
     查询nginx进程
     ``` 
       ps aux |grep nginx 
+      ps -ef |grep nginx
     ```
 
