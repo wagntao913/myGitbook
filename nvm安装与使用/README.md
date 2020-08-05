@@ -4,15 +4,15 @@
  ##### 介绍
  > nvm is a version manager for node.js, designed to be installed per-user, and invoked per-shell. nvm works on any POSIX-compliant shell (sh, dash, ksh, zsh, bash), in particular on these platforms: unix, macOS, and windows WSL.
  ##### ==下载与安装==
- 直接访问[传送门](https://upload-images.jianshu.io/upload_images/9989643-782fc61e7d13d273.png?imageMogr2/auto-orient/strip|imageView2/2/w/495/format/webp)，选择nvm-setup.zip。下载后直接安装皆可
+ 直接访问[传送门](https://github.com/coreybutler/nvm-windows/releases)，选择nvm-setup.zip。下载后直接安装皆可
  
- ![image](https://upload-images.jianshu.io/upload_images/9989643-782fc61e7d13d273.png?imageMogr2/auto-orient/strip|imageView2/2/w/495/format/webp)
+ ![image](https://persongitbook.oss-cn-beijing.aliyuncs.com/nvmInstall.png)
  
- ![image](https://upload-images.jianshu.io/upload_images/9989643-7a8d4831b2ea94c6.png?imageMogr2/auto-orient/strip|imageView2/2/w/497/format/webp)
+ ![image](https://persongitbook.oss-cn-beijing.aliyuncs.com/nodePosition.png)
  ##### 验证安装
  打开命令行，直行 nvm -v 命令
  
- ![image](https://upload-images.jianshu.io/upload_images/9989643-13c3d2edddaa294b.png?imageMogr2/auto-orient/strip|imageView2/2/w/981/format/webp)
+ ![image](https://persongitbook.oss-cn-beijing.aliyuncs.com/nvmVerify.png)
  
 ##### 常用命令
 > **nvm install <version>** 安装指定版本，可模糊安装  
