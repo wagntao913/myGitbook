@@ -25,6 +25,7 @@
 ### 2.Jenkins安装
   - 运行tomcat，在tomact目录下的 `...\apache-tomcat-9.0.24\bin` 目录下的 startup.bat,双击运行即可
     记住生成的密码，用于Administrator password
+    <img src='https://persongitbook.oss-cn-beijing.aliyuncs.com/jenkinsInstall.png'>
   - 打开浏览器`http://localhost:8080/jenkins/`，属于安装时生成的密码，点击`Continue`
     <img src = 'https://persongitbook.oss-cn-beijing.aliyuncs.com/jenkins-getting-started.png' />
   - 进入jenkins插件安装选择页面，有安装推荐的插件和自定义安装插件两个选项，我们选择安装推荐的插件`Install suggested plugins`，之后进入插件安装界面
@@ -35,17 +36,18 @@
     <img src='https://persongitbook.oss-cn-beijing.aliyuncs.com/jenkins-welcome.png'>
 ### 3. jenkins插件安装
   点击Jenkins首页 系统管理 》插件管理 》可选插件 .可以自由搜索相关的插件，进行安装
-  <img src = 'https://upload-images.jianshu.io/upload_images/12796932-af318306f3b5a2f8.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp' />
+  <img src = 'https://persongitbook.oss-cn-beijing.aliyuncs.com/pluginsManange.png' />
+  <img src = 'https://persongitbook.oss-cn-beijing.aliyuncs.com/pluginsInstall.png' />
 
 ### 4. jenkins 创建自动化项目部署
 - 点击首页的New 任务或者create new jobs,进入创建页面，输入项目名字，选择第一个构建一个自由风格的软件项目，输入项目名称，点击确定
-<img src = 'https://upload-images.jianshu.io/upload_images/4092152-819e964cabea90f9.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp' />
+<img src = 'https://persongitbook.oss-cn-beijing.aliyuncs.com/jenkinsCreate.png' />
 - 进入项目配置页面
-<img src = 'https://user-gold-cdn.xitu.io/2018/9/11/165c77818ed60bb9?imageView2/0/w/1280/h/960/format/webp/ignore-error/1' />
+<img src = 'https://persongitbook.oss-cn-beijing.aliyuncs.com/jenkinsSettings.png' />
   - General配置
   - 源码管理
     选择代码管理工具 Git/SVN,输入项目目录地址，账号/密码
-    <img src = 'https://upload-images.jianshu.io/upload_images/4092152-845c7b4fdccd257a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp' />
+    <img src = 'https://persongitbook.oss-cn-beijing.aliyuncs.com/codeSourceSetting.png' />
   - 构建环境
     选中`Provide Node & npm bin/ folder to PATH`之后，你会发现NodeJS Installation并没有可选项，点击 系统设置 》全局工具配置 找到NodeJS,选择和你开发环境一样的NodeJS版本，然后点击保存
     <img src="https://persongitbook.oss-cn-beijing.aliyuncs.com/jenkins-node-enviornment.png">  

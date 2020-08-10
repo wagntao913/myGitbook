@@ -116,7 +116,7 @@ export default WS
         }
     }
 ```
-如果要在所有的界面都能接收socket推送消息，并弹出提示可以在App.vue中监听
+如果要在所有的界面都能接收socket推送消息，并弹出提示可以在布局组件(Layout.vue ...)中监听
 
 ```
     computed:{
