@@ -5,4 +5,5 @@
 * [Nginx安装](centos服务环境搭建/Nginx安装.md)
 * [Nvm-Node安装](centos服务环境搭建/Nvm-Node安装.md)
 * [MongoDB安装](centos服务环境搭建/MongoDB安装.md)
+* [MongoDB安装](centos服务环境搭建/MySQL安装.md)
 
