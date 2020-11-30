@@ -25,3 +25,6 @@
 `gitbook build ./ ./docs`
 然后直接推送到 GitHub 仓库的。
 ` git push origin master`
+
+#### 注意事项
+* 当使用高版本的node（14.15.0）时，运行gitbook命令可能会报错，建议使用低版本的node(本人使用的为10.15.3)
