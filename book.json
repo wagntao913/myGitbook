@@ -5,6 +5,7 @@
   "language": "zh-hans",
   "plugins": [
     "search",
+    "advanced-emoji",
     "-highlight",
     "-sharing",
     "sharing-plus",

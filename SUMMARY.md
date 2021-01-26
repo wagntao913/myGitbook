@@ -3,6 +3,8 @@
 * [Introduction](README.md)
 * [gitbook使用](gitbook使用/README.md)
 * [git版本管理](版本管理/git版本管理.md)
+* [JS知识](JS/readme.md)
+    * [数据类型](JS/数据类型.md)
 * [Vue](vue/readme.md)
     * [vue+webSocket 实时任务信息通知](vue+webSocket实时任务信息通知/README.md)
     * [nvm安装与使用](nvm安装与使用/README.md)
