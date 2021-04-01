@@ -17,15 +17,22 @@ WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器�
 ##### VUE + WebSocket 长链接实现
 在项目的创建 utils/websocket.js
 
+###### 封装socket 
 ```
-<!--引入store，用于管理socket推送来的消息-->
+// 引入store，用于管理socket推送来的消息
 import store from '../store'
-<!--封装websocket对象-->
+
+// 封装websocket对象
 const WS = {
     $ws:null, // webscoket实例
     wsUrl: 'ws://xxxxx.com:80/xxx', // websocket链接地址
-    <!--初始化webSocket-->
-    createWS：function(){
+    timeout: 30000, // 心跳重连时间
+    timeoutObj: null, // 定时器
+    lockReconnect: false, // 避免重复重连
+    reconnectTimes: 0, // 重连次数
+
+    // 初始化webSocket
+    createWS: function(){
         if('WebSocket' in window){
             this.$ws = new WebSocket(wsURl)
             this.$ws.onopen = this.wsOpen
@@ -33,51 +40,84 @@ const WS = {
             this.$ws.onerror = this.wsError
             this.$ws.onclose = this.wsClose
         } else {
-            alert('当前浏览器不支持webSocket')
+            alert('Current browser Not support websocket')
         }
     },
-    <!--webSocket 打开-->
+
+    // webSocket 打开
     wsOpen: function() {
-        this.$ws.send('连接成功')
+        WS.$ws.send('Hello WebSockets!')
+        store.commit('SET_WS_CONNECT', true)
         console.log('== websocket open ==')
         <!--开始心跳-->
         heartBeat.start()
     },
-    <!--websocket 接收到服务器消息-->
-    wsMessage:function(msg) {
+
+    // websocket 接收到服务器消息
+    wsMessage: function(msg) {
         console.log('== websocket message ==', msg)
-        <!--接受到消息，重置心跳-->
-        heartBeat.reset()
+        // 每次接收到服务端消息后 重置websocket心跳
+        WS.reset()
         store.commit('SET_WS_MSG', msg.data)
     },
-    <!--websocket 发生错误-->
+
+    // websocket 发生错误
     wsError: function(err){
         console.log('== websocket error ==', err)
+        // 发生错误重连socket
+        if (WS.reconnectTimes < 10) {
+            WS.reconnect()
+        }
     },
-    <!--websocket 关闭连接-->
+
+    // websocket 关闭连接
     wsClose: function(event){
         console.log('== websocket close ==', event)
-    }
-}
-<!--webSocket 心跳-->
-const heartBeat = {
-    timeout:30000, // 心跳重连时间
-    timeoutObj:null, // 定时器
-    reset:function(){
-        clearInterVal(this.timeoutObj)
-        console.log('websocket 心跳')
-        WS.start()
+        if (WS.$ws && WS.$ws.readyState === 1) {
+            WS.$ws.close()
+            store.commit('SET_WS_CONNECT', false)
+        }
+        const token = store.getters.token
+        if (token) {
+            if (WS.reconnectTimes < 10) { // 设置重连次数为10次
+                WS.reconnect()
+            }
+        }
     },
-    start:function(){
-        this.timeoutObj = setTimeout(function(){
-            if(WS.$ws.readyState === 1){
+
+    // socket开始心跳
+    wsStartHeart: function(){
+        WS.timeoutObj && clearTimeout(WS.timeoutObj)
+        WS.timeoutObj = setTimeout(function () {
+            // 判断websocket当前状态
+            if (WS.$ws.readyState === 1) {
                 WS.$ws.send('HeartBeat')
             }
-        },this.timeout)
+        }, WS.timeout)
+    },
+
+    // socket 重置心跳
+    wsRset: function (){
+        clearTimeout(WS.timeoutObj)
+        WS.wsStartHeart()
+    },
+
+    // socket 重连
+    wsReconnect: function (){
+        console.log('Reconnection Socket')
+        if (wsConnection.lockReconnect) return
+        WS.reconnectTimes++
+        WS.lockReconnect = true
+        setTimeout(function () { // 没连接上会一直重连，设置延迟避免请求过多
+            WS.createWS()
+            WS.lockReconnect = false
+        }, 6000)
     }
 }
+
 export default WS
 ```
+
 在main.js中引入WS，挂载到Vue原型上
 
 ```
@@ -86,21 +126,35 @@ export default WS
     Vue.prototype.$ws = WS
 ```
 
-在store/index.js创建全局数据存储
+###### socket 全局数据存储
+store/index.js
 
 ```
     const store= new Vuex.Store({
+        modules:{
+            user
+        },
         state:{
-            webSocketMsg:''
+            webSocketMsg:'',
+            webSocketConnect: false,
         },
         mutations:{
+            // 存储socket推送消息
             SET_WS_MSG (state, msg) =>{
                 state.webSocketMsg = msg
+            },
+            // 设置socket链接状态
+            SET_WS_CONNECT (state, msg) {
+                state.webSocketConnect = msg
             }
+        },
+        getters:{
+            webSocketConnect: state => state.webSocketConnect,
+            webSocketMsg: state => state.webSocketMsg
         }
     })
 ```
-在单个组件内部使用
+###### socket 单个组件内使用
 ```
     computed:{
         getWsMsg (){
@@ -116,23 +170,50 @@ export default WS
         }
     }
 ```
-如果要在所有的界面都能接收socket推送消息，并弹出提示可以在布局组件(Layout.vue ...)中监听
+###### socket 全局使用
+在登陆接口的callback中建立socket连接,如果系统将登录的处理封装在store中,
+在layout组件中监听socket信息推送，并在界面上进行通知
+store/user.js
 
 ```
+    import WsConnection from '@/utils/socket'
+    ......
+    const actions = {
+        Login({ commit, state, rootState }, params){
+            return new Promise((reslove, reject) => {
+                login(params).then(res => {
+                    const { token } = res
+                    commit('SET_TOKEN', token)
+                    if(!rootState.webSocketConnect){
+                        WsConnection.createWS()
+                    }
+                })
+            })
+        }
+    }
+```
+Layout.vue
+```
     computed:{
-        getWsMsg (){
-            return this.$store.state.webSocketMsg
+        wsMsg(){
+            return this.$store.getters.webSocketMsg
         }
     },
     watch:{
-        getWsMsg:{
-            handler: function(newVal) {
-                console.log(newVal)
-                alert('接收到webSocket推送'+ newVal)
+        wsMsg(new){
+            if(val){ // 这里还需要判断socket信息不是心跳信息
+                this.showNotify(new)
             }
         }
+    },
+    methods:{
+        showNotify(socketInfo){
+            this.$notify({
+                title: 'socket消息通知',
+                message: socketInfo.msg,
+            })
+        }
     }
-
 ```
 参考文档
 - [WebSocket 教程](http://www.ruanyifeng.com/blog/2017/05/websocket.html)
